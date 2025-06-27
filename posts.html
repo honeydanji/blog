@@ -1,0 +1,58 @@
+---
+layout: default
+title: Posts
+permalink: /posts/
+---
+
+<div class="posts-page">
+  <header class="page-header">
+    <h1 class="page-title">모든 게시글</h1>
+    <p class="page-description">HoneyDanji 기술 블로그의 모든 포스트를 확인하세요.</p>
+  </header>
+
+  <div class="posts-container">
+    {% if site.posts.size > 0 %}
+      <div class="posts-list">
+        {% for post in site.posts %}
+          <article class="post-preview">
+            <h2 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y년 %m월 %d일" }}
+              </time>
+              {% if post.categories.size > 0 %}
+                <div class="post-categories">
+                  {% for category in post.categories %}
+                    <a href="/categories/#{{ category | slugify }}" class="category">{{ category }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              {% if post.tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in post.tags limit:3 %}
+                    <a href="/tags/#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            <div class="post-excerpt">
+              {% if post.excerpt %}
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+              {% else %}
+                {{ post.content | strip_html | truncatewords: 30 }}
+              {% endif %}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">더 읽기 →</a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-posts">
+        <p>아직 게시글이 없습니다.</p>
+        <p>첫 번째 게시글을 작성해보세요!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

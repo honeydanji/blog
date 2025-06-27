@@ -1,0 +1,213 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <header class="page-header">
+    <h1 class="page-title">태그</h1>
+    <p class="page-description">태그별로 정리된 게시글을 확인하세요.</p>
+  </header>
+
+  <div class="tags-container">
+    {% assign tags = site.tags | sort %}
+    {% if tags.size > 0 %}
+      <!-- 태그 클라우드 -->
+      <div class="tags-cloud">
+        <h2>모든 태그</h2>
+        <div class="tags-list">
+          {% for tag in tags %}
+            <a href="#{{ tag[0] | slugify }}" class="tag-link" data-count="{{ tag[1].size }}">
+              {{ tag[0] }} ({{ tag[1].size }})
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- 태그별 포스트 목록 -->
+      <div class="tags-posts">
+        {% for tag in tags %}
+          <section class="tag-section" id="{{ tag[0] | slugify }}">
+            <h2 class="tag-title">
+              <span class="tag-name">#{{ tag[0] }}</span>
+              <span class="tag-count">{{ tag[1].size }}개 포스트</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+              {% for post in tag[1] %}
+                <article class="tag-post">
+                  <h3 class="post-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  </h3>
+                  <div class="post-meta">
+                    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                      {{ post.date | date: "%Y년 %m월 %d일" }}
+                    </time>
+                    {% if post.categories.size > 0 %}
+                      <div class="post-categories">
+                        {% for category in post.categories %}
+                          <a href="/categories/#{{ category | slugify }}" class="category">{{ category }}</a>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  {% if post.excerpt %}
+                    <div class="post-excerpt">
+                      {{ post.excerpt | strip_html | truncatewords: 20 }}
+                    </div>
+                  {% endif %}
+                </article>
+              {% endfor %}
+            </div>
+          </section>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-tags">
+        <p>아직 태그가 없습니다.</p>
+        <p>첫 번째 게시글을 작성하여 태그를 만들어보세요!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.tags-cloud {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.tags-cloud h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.tag-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.tag-link[data-count="1"] { font-size: 0.75rem; }
+.tag-link[data-count="2"] { font-size: 0.875rem; }
+.tag-link[data-count="3"] { font-size: 1rem; }
+.tag-link[data-count^="4"], .tag-link[data-count^="5"] { font-size: 1.125rem; font-weight: 500; }
+
+.tag-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.tag-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.tag-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.tag-count {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  background-color: var(--bg-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+.tag-posts-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tag-post {
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.tag-post:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tag-post .post-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.tag-post .post-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.tag-post .post-title a:hover {
+  color: var(--primary-color);
+}
+
+.tag-post .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.tag-post .post-excerpt {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .tag-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .tags-list {
+    justify-content: center;
+  }
+  
+  .tag-post .post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+</style>

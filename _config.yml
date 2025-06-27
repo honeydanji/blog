@@ -1,0 +1,88 @@
+title: HoneyDanji Tech Blog
+author:
+  name: HoneyDanji
+  email: contact@honeydanji.dev
+description: >-
+  개발자 HoneyDanji의 기술 블로그입니다. 
+  프로그래밍, 개발 경험, 그리고 기술적 인사이트를 공유합니다.
+
+baseurl: ""
+url: "https://honeydanji.github.io/blog"
+
+# Social Links
+github_username: honeydanji
+twitter_username: honeydanji
+linkedin_username: honeydanji
+
+# Build settings
+markdown: kramdown
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Syntax highlighting
+highlighter: rouge
+
+# Markdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "HoneyDanji"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# SEO
+lang: ko-KR
+locale: ko_KR
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Posts
+    url: /posts/
+  - title: Categories
+    url: /categories/
+  - title: Tags
+    url: /tags/

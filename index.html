@@ -1,0 +1,61 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <div class="hero">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-description">{{ site.description }}</p>
+  </div>
+
+  <div class="recent-posts">
+    <h2>최근 게시글</h2>
+    
+    {% if site.posts.size > 0 %}
+      <div class="post-list">
+        {% for post in site.posts limit:5 %}
+          <article class="post-preview">
+            <h3 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y년 %m월 %d일" }}
+              </time>
+              {% if post.categories.size > 0 %}
+                <span class="post-categories">
+                  {% for category in post.categories %}
+                    <span class="category">{{ category }}</span>
+                  {% endfor %}
+                </span>
+              {% endif %}
+            </div>
+            <div class="post-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 50 }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">더 읽기 →</a>
+          </article>
+        {% endfor %}
+      </div>
+      
+      <div class="view-all">
+        <a href="/posts/" class="btn btn-primary">모든 게시글 보기</a>
+      </div>
+    {% else %}
+      <p class="no-posts">아직 게시글이 없습니다. 첫 번째 게시글을 작성해보세요!</p>
+    {% endif %}
+  </div>
+
+  <div class="categories-section">
+    <h2>카테고리</h2>
+    <div class="categories">
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+        <a href="/categories/#{{ category[0] | slugify }}" class="category-tag">
+          {{ category[0] }} ({{ category[1].size }})
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

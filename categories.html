@@ -1,0 +1,80 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="categories-page">
+  <header class="page-header">
+    <h1 class="page-title">카테고리</h1>
+    <p class="page-description">주제별로 정리된 게시글을 확인하세요.</p>
+  </header>
+
+  <div class="categories-container">
+    {% assign categories = site.categories | sort %}
+    {% if categories.size > 0 %}
+      <div class="categories-grid">
+        {% for category in categories %}
+          <div class="category-card" id="{{ category[0] | slugify }}">
+            <h2 class="category-name">{{ category[0] }}</h2>
+            <span class="category-count">{{ category[1].size }}개 포스트</span>
+            
+            <div class="category-posts">
+              {% for post in category[1] limit:5 %}
+                <article class="category-post">
+                  <h3 class="post-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  </h3>
+                  <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%Y.%m.%d" }}
+                  </time>
+                </article>
+              {% endfor %}
+              
+              {% if category[1].size > 5 %}
+                <div class="view-all-posts">
+                  <button onclick="showAllPosts('{{ category[0] | slugify }}')" class="btn-view-all">
+                    모든 포스트 보기 ({{ category[1].size - 5 }}개 더)
+                  </button>
+                  
+                  <div class="hidden-posts" id="hidden-posts-{{ category[0] | slugify }}" style="display: none;">
+                    {% for post in category[1] offset:5 %}
+                      <article class="category-post">
+                        <h3 class="post-title">
+                          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                          {{ post.date | date: "%Y.%m.%d" }}
+                        </time>
+                      </article>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-categories">
+        <p>아직 카테고리가 없습니다.</p>
+        <p>첫 번째 게시글을 작성하여 카테고리를 만들어보세요!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+function showAllPosts(categorySlug) {
+  const hiddenPosts = document.getElementById('hidden-posts-' + categorySlug);
+  const button = document.querySelector(`#${categorySlug} .btn-view-all`);
+  
+  if (hiddenPosts.style.display === 'none') {
+    hiddenPosts.style.display = 'block';
+    button.textContent = '숨기기';
+  } else {
+    hiddenPosts.style.display = 'none';
+    button.textContent = button.textContent.replace('숨기기', '모든 포스트 보기');
+  }
+}
+</script>

@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y년 %m월 %d일" }}
+      </time>
+      {% if page.author %}
+        <span class="post-author">by {{ page.author }}</span>
+      {% endif %}
+      {% if page.categories.size > 0 %}
+        <div class="post-categories">
+          {% for category in page.categories %}
+            <a href="/categories/#{{ category | slugify }}" class="category">{{ category }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          {% for tag in page.tags %}
+            <a href="/tags/#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="post-navigation">
+      {% if page.previous.url %}
+        <div class="prev-post">
+          <a href="{{ page.previous.url | relative_url }}">
+            <span class="nav-label">← 이전 글</span>
+            <span class="nav-title">{{ page.previous.title }}</span>
+          </a>
+        </div>
+      {% endif %}
+      
+      {% if page.next.url %}
+        <div class="next-post">
+          <a href="{{ page.next.url | relative_url }}">
+            <span class="nav-label">다음 글 →</span>
+            <span class="nav-title">{{ page.next.title }}</span>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="share-buttons">
+      <h3>공유하기</h3>
+      <div class="share-links">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}" 
+           class="share-link twitter" target="_blank">Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
+           class="share-link facebook" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | uri_escape }}" 
+           class="share-link linkedin" target="_blank">LinkedIn</a>
+        <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="share-link copy">링크 복사</button>
+      </div>
+    </div>
+
+    {% if page.comments %}
+    <div class="comments">
+      <h3>댓글</h3>
+      <!-- 여기에 댓글 시스템 (Disqus, Utterances 등)을 추가할 수 있습니다 -->
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = '{{ page.url | absolute_url }}';
+          this.page.identifier = '{{ page.id }}';
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://honeydanji-blog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    </div>
+    {% endif %}
+  </footer>
+</article>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    alert('링크가 클립보드에 복사되었습니다!');
+  }, function(err) {
+    console.error('복사 실패: ', err);
+  });
+}
+</script>
