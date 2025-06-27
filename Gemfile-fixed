@@ -1,0 +1,27 @@
+source "https://rubygems.org"
+
+# GitHub Pages 호환성을 위한 Jekyll 버전
+gem "jekyll", "~> 3.9.0"
+
+# GitHub Pages gem (최신 버전)
+gem "github-pages", "~> 228", group: :jekyll_plugins
+
+# 플러그인들
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-seo-tag", "~> 2.6"
+  gem "jekyll-remote-theme"
+end
+
+# Windows 및 JRuby 플랫폼 지원
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", "~> 1.2"
+  gem "tzinfo-data"
+end
+
+# Windows 성능 향상
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# HTTP parser
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
