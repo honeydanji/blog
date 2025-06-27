@@ -19,22 +19,6 @@ excerpt: "안녕하세요! 클라우드 네이티브 기술과 MLOps를 전문�
 ### **클라우드 & 인프라**
 현재 **AWS EKS 기반의 Kubernetes 클러스터**에서 대부분의 작업을 하고 있습니다. 단순히 Pod를 띄우는 것을 넘어서, **ArgoCD를 통한 GitOps 배포**, **Karpenter로 노드 자동 스케일링**, **Istio 서비스 메시** 등을 활용한 프로덕션 환경을 구축하고 운영합니다.
 
-```yaml
-# 이런 식의 복잡한 인프라 구성을 다룹니다
-apiVersion: karpenter.sh/v1alpha5
-kind: Provisioner
-metadata:
-  name: gpu-nodes
-spec:
-  requirements:
-    - key: karpenter.sh/capacity-type
-      operator: In
-      values: ["spot", "on-demand"]
-    - key: node.kubernetes.io/instance-type
-      operator: In
-      values: ["g4dn.xlarge", "g5.xlarge", "p3.2xlarge"]
-```
-
 ### **MLOps & AI 인프라**
 머신러닝 모델을 프로덕션에서 서빙하고 관리하는 일을 주로 합니다. **KServe**로 모델 추론 서비스를 구축하고, **Kubeflow Pipelines**로 ML 워크플로우를 자동화하며, **Label Studio** 같은 도구들을 Kubernetes 환경에 통합해서 엔드투엔드 ML 파이프라인을 만들어왔습니다.
 
