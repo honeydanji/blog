@@ -1,3 +1,10 @@
+/* ===== HONEYDANJI BLOG STYLES ===== */
+/* 새로운 카테고리 기반 블로그 UI 스타일 */
+
+/* Import additional styles */
+@import url('new-styles.css');
+@import url('category-styles.css');
+
 /* ===== RESET & BASE STYLES ===== */
 * {
   margin: 0;

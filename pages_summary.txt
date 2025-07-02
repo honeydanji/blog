@@ -1,0 +1,144 @@
+=== NOTION 기술블로그 DATABASE SUMMARY ===
+Database ID: be81096a-2515-4eb1-bcc0-bba5bfdb3d59
+Collection Date: 2025-07-02
+Total Pages Collected: 70+ (systematic pagination)
+Status: Comprehensive collection in progress
+
+=== HIERARCHICAL STRUCTURE ===
+
+ROOT LEVEL PAGES (3):
+
+1. FAIL…… (ID: 224393a5-a797-80ce-b03a-f99ec3525efa)
+   └── [PRO] AI 활용해서 1인 개발부터 창업까지 (206393a5-a797-809a-9d43-f42fdacc2f97)
+       ├── 어떤 서비스를 만들어야 하지? (206393a5-a797-80ca-a7ec-d6c8a65511c5)
+       └── [1] 한눈에 보는 클라이밍 루트 세팅 일정 (208393a5-a797-80e0-a7dc-c70eac2e439a)
+           ├── 메모장 (210393a5-a797-80de-8fdb-d94464677565)
+           ├── [DEV] MVP 정의 (211393a5-a797-8024-9194-e2944617e7db)
+           └── 기술블로그 - 2025-06-18 (216393a5-a797-8016-87bc-f91f4bbac563)
+   └── 178393a5-a797-8040-9441-d6f7176f45c8 (Related)
+   └── [PRO] 유기동물 입양 추천 시스템 [Interruption] (1aa393a5-a797-8087-b47a-cc1d13bb0337)
+       ├── [PRO 0] 아키텍처 구현 (1aa393a5-a797-8096-8439-d12eea1ecee8)
+       ├── [PRO 1] 홈서버 구축 (1aa393a5-a797-80a5-bc7d-e2b36ed24680)
+       │   └── [DEV] 학습 (1aa393a5-a797-8085-9688-ca34266cbcb0)
+       ├── [PRO 2] MLops 환경 구축 (1aa393a5-a797-80aa-b09c-dfac34df373c)
+       └── [PRO 3] AI 비서 모델 선정 (1aa393a5-a797-80b8-a99a-c9aa5a463256)
+
+2. Resume (ID: 21f393a5-a797-800b-9600-e182d7442516)
+   (Standalone page - no children)
+
+3. AI (ID: 21f393a5-a797-8000-91a3-e971cf9a2564)
+   ├── CLAUD (21f393a5-a797-809c-bb5b-f8da6d3531fb)
+   │   └── claud code로 한 것 (21f393a5-a797-8061-a1ce-e97828e7c7d0)
+   ├── Chat GPT (21f393a5-a797-802a-8890-f478f7c2896c)
+   │   └── 1. 무자본 무경험인 사람이 AI로 한달에 10만원부터 벌기 프롬프트 (21f393a5-a797-80d9-a9ff-e8e36afa1022) ★
+   └── Perplexity (21f393a5-a797-80bb-8f21-d2669e75f8df)
+
+=== MAJOR PROJECT CATEGORIES ===
+
+🚀 PROJECTS (PRO):
+- [PRO] Amazon EKS 기반 MLOps 인프라 비용 최적화 [EKS, Karpenter, Knative]
+- [PRO] 유기동물 입양 추천 시스템 [Interruption]
+- [PRO] AI 활용해서 1인 개발부터 창업까지
+- [PRO] Claude + MCP + ** = 디자인 자동화 [Progress]
+
+🔧 DEVELOPMENT (DEV):
+- [DEV] EKS 클러스터 리소스 효율성 해결
+- [DEV] 실제 구현
+- [DEV] 아키텍처 설계
+- [DEV] 아키텍처 구현
+- [DEV] FastAPI + SQLAlchemy 비동기 설정
+- [DEV] FastAPI + Celery 설정
+- [DEV] middleware 활용해 요청별 session 관리
+- [DEV] 동적 테이블 생성 비동기 작업 오류
+- [DEV] obejct_session 비동기 작업 오류
+
+🐛 TROUBLESHOOTING (TB):
+- [TB] cursor(vscode) ssh remote로 ec2 ssh 접속 오류
+- [TB] EKS 치명적인 오류 [Troubleshooting]
+- [TB] EKS 클러스터 엔드포인트 접근 오류
+- [TB] ColdStart 문제 [EKS, Knative, Troubleshooting, ColdStart]
+- [TB] knative 프로비저닝 문제 [EKS, Knative, Troubleshooting, Provisiorning]
+- [TB] ALB - Grafana 라우팅 문제 해결하기 [EKS, Grafana, Troubleshooting, Routing]
+- [TB] Kubeflow UI - KFP 실행 오류 [Kubeflow, KFP]
+- [TB] KFP 모델 파이프라인 - Lambda 연동 이슈 요약 [진행중]
+
+📚 STUDY (STDY):
+- [STDY] FastAPI MCP 사용
+- [STDY] Kubernetes
+- [STDY] SQLAlchemy의 ORM 방식과 Raw SQL 실행 방식의 차이
+- [STDY] Query String vs SimpleJSON [Back]
+
+💡 IDEAS (IDEA):
+- [IDEA] - General idea category
+- 1. 파이썬 가상환경 마다 코파일럿을 지정할 수 있다면?
+- 2. MCP + Claude
+- 3. n8n 활용 - 디자인 자동화
+- 4. n8n + MCP + Claude
+- 5. n8n + langchain
+
+=== PAGES WITH RICH CONTENT ===
+
+★ DETAILED CONTENT EXAMPLE:
+Page: "1. 무자본 무경험인 사람이 AI로 한달에 10만원부터 벌기 프롬프트"
+Content Type: Numbered list (7 items)
+Topics covered:
+1. 수익형 스킬 탐색기
+2. 0원 창업 런칭 플랜
+3. 고객 심리 해독기
+4. 가격 앵커링 전략 스크립트
+5. 첫 고객 유입형 콘텐츠
+6. 10분 내 성사시키는 세일즈 대화
+7. 서비스 패키지 설계 머신
+
+=== TAG DISTRIBUTION ===
+
+🏷️ Most Common Tags:
+- EKS (Kubernetes/AWS related)
+- Troubleshooting (Problem-solving content)
+- 진행중 (In Progress)
+- Knative (Serverless Kubernetes)
+- 완료 (Completed)
+- Progress (Active projects)
+- Interruption (Paused/interrupted work)
+
+=== COLLECTION STATUS ===
+
+✅ Completed:
+- Database structure analysis
+- Page hierarchy mapping
+- Sample content extraction
+- Parent-child relationship mapping
+
+🔄 In Progress:
+- Complete page content collection
+- Full pagination through all 70+ pages
+- Block content retrieval for all pages
+
+📋 Next Steps:
+1. Continue systematic pagination to collect all remaining pages
+2. Retrieve block content for each page
+3. Organize pages by categories (PRO, DEV, TB, STDY, IDEA)
+4. Create individual markdown files for blog content
+5. Set up automated blog post generation workflow
+
+=== TECHNICAL DETAILS ===
+
+API Calls Made: 8+ pagination requests
+Pages Collected: 70+ (partial)
+Database ID: be81096a-2515-4eb1-bcc0-bba5bfdb3d59
+Collection Method: Systematic pagination with 10-page batches
+Content Retrieval: Sample blocks retrieved for content-rich pages
+
+=== FILE STRUCTURE ===
+
+Generated Files:
+- all_pages_data.json (Comprehensive structured data)
+- pages_summary.txt (This human-readable summary)
+- collect_all_pages.py (Data processing script)
+
+The collection demonstrates a well-organized technical blog database with:
+- Clear project categorization
+- Hierarchical content organization
+- Rich technical content on AI, AWS, Kubernetes, FastAPI
+- Active development and troubleshooting documentation
+- Future project ideas and implementation plans

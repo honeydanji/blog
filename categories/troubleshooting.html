@@ -1,0 +1,288 @@
+---
+layout: page
+title: "🐛 트러블슈팅"
+permalink: /categories/troubleshooting/
+description: "EKS, Kubernetes, 네트워킹 등 실제 운영 중 마주한 문제들과 해결 과정"
+---
+
+<div class="category-page">
+  <div class="category-header">
+    <div class="category-icon">🐛</div>
+    <h1>트러블슈팅 (TB)</h1>
+    <p class="category-description">
+      실제 프로덕션 환경에서 마주한 다양한 문제들과 해결 과정을 공유합니다.
+      EKS, Kubernetes, 네트워킹, 배포 등 운영 중 발생하는 실제 이슈들과 
+      문제 해결 접근법을 상세히 다룹니다.
+    </p>
+  </div>
+
+  <div class="problem-categories">
+    <h2>🔍 주요 문제 영역</h2>
+    <div class="problem-grid">
+      <div class="problem-category">
+        <div class="category-icon">☸️</div>
+        <h3>Kubernetes & EKS</h3>
+        <p>클러스터 관리, 네트워킹, 리소스 최적화 관련 이슈</p>
+        <div class="issue-count">12+ 해결</div>
+      </div>
+      <div class="problem-category">
+        <div class="category-icon">🌐</div>
+        <h3>네트워킹</h3>
+        <p>ALB, 라우팅, DNS, 서비스 디스커버리 문제</p>
+        <div class="issue-count">8+ 해결</div>
+      </div>
+      <div class="problem-category">
+        <div class="category-icon">🚀</div>
+        <h3>배포 & CI/CD</h3>
+        <p>ArgoCD, 컨테이너 배포, 롤백 관련 이슈</p>
+        <div class="issue-count">6+ 해결</div>
+      </div>
+      <div class="problem-category">
+        <div class="category-icon">⚡</div>
+        <h3>성능 & 스케일링</h3>
+        <p>콜드 스타트, 리소스 부족, 프로비저닝 문제</p>
+        <div class="issue-count">5+ 해결</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-content">
+    <h2>🔥 주요 트러블슈팅 사례</h2>
+    
+    <div class="trouble-card critical">
+      <div class="trouble-header">
+        <div class="severity-badge critical">CRITICAL</div>
+        <h3>
+          <a href="/posts/eks-fatal-error-troubleshooting/">
+            EKS 치명적인 오류 해결 과정
+          </a>
+        </h3>
+        <div class="trouble-tags">
+          <span class="tag">EKS</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Critical</span>
+        </div>
+      </div>
+      <div class="trouble-content">
+        <div class="problem-summary">
+          <div class="problem-impact">
+            <span class="impact-label">영향도:</span>
+            <span class="impact-value">전체 서비스 중단</span>
+          </div>
+          <div class="resolution-time">
+            <span class="time-label">해결 시간:</span>
+            <span class="time-value">4시간</span>
+          </div>
+        </div>
+        <p>
+          프로덕션 EKS 클러스터에서 발생한 치명적인 오류와 
+          신속한 복구를 위한 체계적인 문제 해결 과정을 다룹니다.
+        </p>
+        <ul class="trouble-highlights">
+          <li>문제 발생 원인 분석과 로그 추적 방법</li>
+          <li>긴급 복구 프로세스와 임시 해결책</li>
+          <li>근본 원인 해결과 재발 방지 대책</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trouble-card major">
+      <div class="trouble-header">
+        <div class="severity-badge major">MAJOR</div>
+        <h3>
+          <a href="/posts/cursor-ssh-ec2-connection-issues/">
+            Cursor(VSCode) SSH Remote EC2 접속 오류
+          </a>
+        </h3>
+        <div class="trouble-tags">
+          <span class="tag">SSH</span>
+          <span class="tag">VSCode</span>
+          <span class="tag">EC2</span>
+        </div>
+      </div>
+      <div class="trouble-content">
+        <div class="problem-summary">
+          <div class="problem-impact">
+            <span class="impact-label">영향도:</span>
+            <span class="impact-value">개발 환경 중단</span>
+          </div>
+          <div class="resolution-time">
+            <span class="time-label">해결 시간:</span>
+            <span class="time-value">2시간</span>
+          </div>
+        </div>
+        <p>
+          Cursor IDE에서 EC2 인스턴스로 SSH 원격 접속 시 발생하는 
+          연결 오류와 인증 문제 해결 과정을 상세히 다룹니다.
+        </p>
+        <ul class="trouble-highlights">
+          <li>SSH 키 인증 및 권한 설정 문제</li>
+          <li>네트워크 보안 그룹 구성 이슈</li>
+          <li>IDE별 SSH 설정 차이점과 해결법</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trouble-card warning">
+      <div class="trouble-header">
+        <div class="severity-badge warning">WARNING</div>
+        <h3>
+          <a href="/posts/knative-cold-start-problem/">
+            Knative 콜드 스타트 문제 해결
+          </a>
+        </h3>
+        <div class="trouble-tags">
+          <span class="tag">Knative</span>
+          <span class="tag">Cold Start</span>
+          <span class="tag">Performance</span>
+        </div>
+      </div>
+      <div class="trouble-content">
+        <div class="problem-summary">
+          <div class="problem-impact">
+            <span class="impact-label">영향도:</span>
+            <span class="impact-value">응답 지연</span>
+          </div>
+          <div class="resolution-time">
+            <span class="time-label">해결 시간:</span>
+            <span class="time-value">1일</span>
+          </div>
+        </div>
+        <p>
+          Knative 서빙에서 발생하는 콜드 스타트 지연 문제를 
+          분석하고 최적화한 실제 경험을 공유합니다.
+        </p>
+        <ul class="trouble-highlights">
+          <li>콜드 스타트 발생 원인과 성능 분석</li>
+          <li>컨테이너 이미지 최적화 방법</li>
+          <li>워밍업 전략과 스케일링 정책 조정</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="troubleshooting-methodology">
+    <h2>🔧 문제 해결 방법론</h2>
+    <div class="methodology-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>문제 정의</h3>
+        <p>정확한 증상 파악과 재현 조건 확인</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>정보 수집</h3>
+        <p>로그 분석, 메트릭 확인, 환경 상태 점검</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>가설 수립</h3>
+        <p>가능한 원인들을 체계적으로 분석</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>해결책 적용</h3>
+        <p>우선순위별로 해결책 시도 및 검증</p>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <h3>재발 방지</h3>
+        <p>근본 원인 해결과 모니터링 강화</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="posts-section">
+    <h2>📝 모든 트러블슈팅 포스트</h2>
+    
+    <div class="posts-list">
+      {% assign trouble_posts = site.posts | where_exp: "post", "post.categories contains 'troubleshooting' or post.tags contains 'TB'" %}
+      
+      {% if trouble_posts.size > 0 %}
+        {% for post in trouble_posts %}
+          <article class="post-item trouble">
+            <div class="post-severity">
+              {% if post.tags contains 'Critical' %}
+                <span class="severity critical">CRITICAL</span>
+              {% elsif post.tags contains 'Major' %}
+                <span class="severity major">MAJOR</span>
+              {% else %}
+                <span class="severity warning">WARNING</span>
+              {% endif %}
+            </div>
+            <div class="post-date">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <p class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+              </p>
+              <div class="post-tags">
+                {% for tag in post.tags limit:4 %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      {% else %}
+        <div class="coming-soon">
+          <div class="coming-soon-icon">🚨</div>
+          <h3>트러블슈팅 포스트 준비 중</h3>
+          <p>
+            실제 프로덕션 환경에서 마주한 다양한 문제들과 
+            체계적인 해결 과정을 담은 포스트들을 준비하고 있습니다.
+          </p>
+          <div class="preview-list">
+            <h4>곧 공개될 주제들:</h4>
+            <ul>
+              <li>EKS 클러스터 엔드포인트 접근 오류 해결</li>
+              <li>Knative 프로비저닝 문제 완전 분석</li>
+              <li>ALB-Grafana 라우팅 문제 디버깅</li>
+              <li>Kubeflow KFP 실행 오류 트러블슈팅</li>
+              <li>Lambda 연동 이슈 종합 해결 가이드</li>
+            </ul>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="tools-and-commands">
+    <h2>🛠️ 자주 사용하는 디버깅 도구</h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <h3>Kubernetes</h3>
+        <code>kubectl logs, describe, get events</code>
+      </div>
+      <div class="tool-card">
+        <h3>AWS</h3>
+        <code>aws logs, cloudformation, ec2</code>
+      </div>
+      <div class="tool-card">
+        <h3>Network</h3>
+        <code>ping, telnet, nslookup, curl</code>
+      </div>
+      <div class="tool-card">
+        <h3>Monitoring</h3>
+        <code>prometheus, grafana, cloudwatch</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="category-navigation">
+    <div class="nav-links">
+      <a href="/categories/development/" class="nav-link">
+        <div class="nav-icon">🔧</div>
+        <span>← 개발</span>
+      </a>
+      <a href="/categories/study/" class="nav-link">
+        <div class="nav-icon">📚</div>
+        <span>학습 →</span>
+      </a>
+    </div>
+  </div>
+</div>

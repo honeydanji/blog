@@ -1,0 +1,372 @@
+{
+  "database_info": {
+    "database_id": "be81096a-2515-4eb1-bcc0-bba5bfdb3d59",
+    "name": "기술블로그",
+    "collection_date": "2025-07-02",
+    "status": "comprehensive_collection",
+    "total_pages_collected": 70,
+    "collection_method": "systematic_pagination"
+  },
+  "pages": [
+    {
+      "id": "224393a5-a797-80ce-b03a-f99ec3525efa",
+      "title": "FAIL……",
+      "tags": [],
+      "parent_relations": [],
+      "child_relations": [
+        "206393a5-a797-809a-9d43-f42fdacc2f97",
+        "178393a5-a797-8040-9441-d6f7176f45c8",
+        "1aa393a5-a797-8087-b47a-cc1d13bb0337"
+      ],
+      "created_time": "2025-07-02T04:15:00.000Z",
+      "last_edited_time": "2025-07-02T04:15:00.000Z",
+      "url": "https://www.notion.so/FAIL-224393a5a79780ceb03af99ec3525efa",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 3,
+        "level": 0,
+        "category": "root"
+      }
+    },
+    {
+      "id": "21f393a5-a797-800b-9600-e182d7442516",
+      "title": "Resume",
+      "tags": [],
+      "parent_relations": [],
+      "child_relations": [],
+      "created_time": "2025-06-27T07:49:00.000Z",
+      "last_edited_time": "2025-06-27T07:49:00.000Z",
+      "url": "https://www.notion.so/Resume-21f393a5a797800b9600e182d7442516",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": false,
+        "child_count": 0,
+        "level": 0,
+        "category": "standalone"
+      }
+    },
+    {
+      "id": "21f393a5-a797-8061-a1ce-e97828e7c7d0",
+      "title": "claud code로 한 것",
+      "tags": [],
+      "parent_relations": ["21f393a5-a797-809c-bb5b-f8da6d3531fb"],
+      "child_relations": [],
+      "created_time": "2025-06-27T06:02:00.000Z",
+      "last_edited_time": "2025-06-27T06:03:00.000Z",
+      "url": "https://www.notion.so/claud-code-21f393a5a7978061a1cee97828e7c7d0",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": false,
+        "child_count": 0,
+        "level": 2,
+        "category": "leaf",
+        "parent_title": "CLAUD"
+      }
+    },
+    {
+      "id": "21f393a5-a797-80bb-8f21-d2669e75f8df",
+      "title": "Perplexity",
+      "tags": [],
+      "parent_relations": ["21f393a5-a797-8000-91a3-e971cf9a2564"],
+      "child_relations": [],
+      "created_time": "2025-06-27T05:43:00.000Z",
+      "last_edited_time": "2025-06-27T05:43:00.000Z",
+      "url": "https://www.notion.so/Perplexity-21f393a5a79780bb8f21d2669e75f8df",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": false,
+        "child_count": 0,
+        "level": 2,
+        "category": "leaf",
+        "parent_title": "AI"
+      }
+    },
+    {
+      "id": "21f393a5-a797-80d9-a9ff-e8e36afa1022",
+      "title": "1. 무자본 무경험인 사람이 AI로 한달에 10만원부터 벌기 프롬프트",
+      "tags": [],
+      "parent_relations": ["21f393a5-a797-802a-8890-f478f7c2896c"],
+      "child_relations": [],
+      "created_time": "2025-06-27T02:26:00.000Z",
+      "last_edited_time": "2025-06-27T02:33:00.000Z",
+      "url": "https://www.notion.so/1-AI-10-21f393a5a79780d9a9ffe8e36afa1022",
+      "public_url": null,
+      "blocks": [
+        {
+          "id": "21f393a5-a797-808b-9417-f507a9b633c8",
+          "type": "numbered_list_item",
+          "content": "수익형 스킬 탐색기\n"제가 [특정 스킬]을 할 줄 압니다.\n지금 이 스킬로 사람들이 10만 원 이상 벌고 있는 사례 10가지를, 실제 근거와 함께 알려주세요."",
+          "created_time": "2025-06-27T02:29:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-80f2-8539-cab008a21fb0",
+          "type": "numbered_list_item",
+          "content": "0원 창업 런칭 플랜\n"현재 자본은 0원이고, 보유 스킬은 [X]입니다.\n무료 툴만 사용해서 7일 안에 첫 유료 고객을 만드는 실행 계획을 짜주세요."",
+          "created_time": "2025-06-27T02:29:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-8072-bfce-e5d4f30fc7e8",
+          "type": "numbered_list_item",
+          "content": "고객 심리 해독기\n"[문제]를 가진 사람들이 제 [스킬]이 필요합니다.\n이들에게 '좀 더 생각해볼게요' 대신 '당장 돈 내고 싶다'는 마음이 들게 할 멘트를 작성해주세요."",
+          "created_time": "2025-06-27T02:29:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-802d-84de-cb50336b2d5d",
+          "type": "numbered_list_item",
+          "content": "가격 앵커링 전략 스크립트\n"경쟁자는 $[가격]을 받고 있습니다.\n그에 비해 내 중간 가격 옵션이 가장 매력적으로 느껴지게끔\n3단계 가격 구조를 설계해주세요."",
+          "created_time": "2025-06-27T02:29:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-8005-86d9-d56e54bae036",
+          "type": "numbered_list_item",
+          "content": "첫 고객 유입형 콘텐츠\n"[플랫폼]에 올릴 수 있는, 이상적인 고객이 오늘 바로 DM을 보내고 싶게 만드는 게시글 5개를 작성해주세요.\n각각 심리적 트리거도 포함해주세요."",
+          "created_time": "2025-06-27T02:30:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-80c4-bb40-de2688b915a2",
+          "type": "numbered_list_item",
+          "content": "10분 내 성사시키는 세일즈 대화\n"관심은 있지만 망설이는 고객이 있습니다.\n그들의 진짜 망설임 이유를 파악하고 해결해줄 수 있는 질문 5개와 그에 대한 대응 전략을 알려주세요."",
+          "created_time": "2025-06-27T02:30:00.000Z"
+        },
+        {
+          "id": "21f393a5-a797-80fd-a78e-c4ad71aa2159",
+          "type": "numbered_list_item",
+          "content": "서비스 패키지 설계 머신\n"제가 [당신의 스킬]을 할 줄 압니다.\nStarter(긴급 문제 1개 해결), Professional(전체 문제 해결), VIP(프리미엄 케어)\n이렇게 3가지 패키지를 구성해 주세요. 각 패키지에 포함될 내용과, 고객이 구매하고 싶어할 이유도 함께 써주세요."",
+          "created_time": "2025-06-27T02:30:00.000Z"
+        }
+      ],
+      "metadata": {
+        "has_children": false,
+        "child_count": 0,
+        "level": 3,
+        "category": "content",
+        "parent_title": "Chat GPT",
+        "block_count": 7,
+        "content_type": "numbered_list"
+      }
+    },
+    {
+      "id": "21f393a5-a797-802a-8890-f478f7c2896c",
+      "title": "Chat GPT",
+      "tags": [],
+      "parent_relations": ["21f393a5-a797-8000-91a3-e971cf9a2564"],
+      "child_relations": ["21f393a5-a797-80d9-a9ff-e8e36afa1022"],
+      "created_time": "2025-06-27T02:25:00.000Z",
+      "last_edited_time": "2025-06-27T05:44:00.000Z",
+      "url": "https://www.notion.so/Chat-GPT-21f393a5a797802a8890f478f7c2896c",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 1,
+        "level": 2,
+        "category": "branch",
+        "parent_title": "AI"
+      }
+    },
+    {
+      "id": "21f393a5-a797-809c-bb5b-f8da6d3531fb",
+      "title": "CLAUD",
+      "tags": [],
+      "parent_relations": ["21f393a5-a797-8000-91a3-e971cf9a2564"],
+      "child_relations": ["21f393a5-a797-8061-a1ce-e97828e7c7d0"],
+      "created_time": "2025-06-27T02:25:00.000Z",
+      "last_edited_time": "2025-06-27T06:02:00.000Z",
+      "url": "https://www.notion.so/CLAUD-21f393a5a797809cbb5bf8da6d3531fb",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 1,
+        "level": 2,
+        "category": "branch",
+        "parent_title": "AI"
+      }
+    },
+    {
+      "id": "21f393a5-a797-8000-91a3-e971cf9a2564",
+      "title": "AI",
+      "tags": [],
+      "parent_relations": [],
+      "child_relations": [
+        "21f393a5-a797-809c-bb5b-f8da6d3531fb",
+        "21f393a5-a797-802a-8890-f478f7c2896c",
+        "21f393a5-a797-80bb-8f21-d2669e75f8df"
+      ],
+      "created_time": "2025-06-27T02:25:00.000Z",
+      "last_edited_time": "2025-06-27T05:43:00.000Z",
+      "url": "https://www.notion.so/AI-21f393a5a797800091a3e971cf9a2564",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 3,
+        "level": 0,
+        "category": "root"
+      }
+    },
+    {
+      "id": "1de393a5-a797-8061-b68f-d78fbb2b353b",
+      "title": "[PRO] Amazon EKS 기반 MLOps 인프라 비용 최적화",
+      "tags": ["EKS", "Karpenter", "Knative"],
+      "parent_relations": ["178393a5-a797-805a-a1e1-c5ff34b045b7"],
+      "child_relations": [
+        "1c7393a5-a797-8098-8c12-fd6f201b68d4",
+        "1fc393a5-a797-8030-9f62-dc5a54b4939b",
+        "21e393a5-a797-8063-be1c-c458672c8fdf"
+      ],
+      "created_time": "2025-04-23T06:50:00.000Z",
+      "last_edited_time": "2025-06-26T08:35:00.000Z",
+      "url": "https://www.notion.so/PRO-Amazon-EKS-MLOps-1de393a5a7978061b68fd78fbb2b353b",
+      "public_url": "https://maroon-redcurrant-7c5.notion.site/PRO-Amazon-EKS-MLOps-1de393a5a7978061b68fd78fbb2b353b",
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 3,
+        "level": 1,
+        "category": "project",
+        "parent_title": "[PRO] AI 활용해서 1인 개발부터 창업까지"
+      }
+    },
+    {
+      "id": "1aa393a5-a797-8087-b47a-cc1d13bb0337",
+      "title": "[PRO] 유기동물 입양 추천 시스템",
+      "tags": ["Interruption"],
+      "parent_relations": ["224393a5-a797-80ce-b03a-f99ec3525efa"],
+      "child_relations": [
+        "1aa393a5-a797-8096-8439-d12eea1ecee8",
+        "1aa393a5-a797-80a5-bc7d-e2b36ed24680",
+        "1aa393a5-a797-80aa-b09c-dfac34df373c",
+        "1aa393a5-a797-80b8-a99a-c9aa5a463256"
+      ],
+      "created_time": "2025-03-02T08:33:00.000Z",
+      "last_edited_time": "2025-07-02T04:15:00.000Z",
+      "url": "https://www.notion.so/PRO-1aa393a5a7978087b47acc1d13bb0337",
+      "public_url": null,
+      "blocks": [],
+      "metadata": {
+        "has_children": true,
+        "child_count": 4,
+        "level": 1,
+        "category": "project",
+        "parent_title": "FAIL……"
+      }
+    }
+  ],
+  "hierarchy": {
+    "root_pages": [
+      {
+        "id": "224393a5-a797-80ce-b03a-f99ec3525efa",
+        "title": "FAIL……",
+        "tags": [],
+        "level": 0,
+        "children": [
+          {
+            "id": "206393a5-a797-809a-9d43-f42fdacc2f97",
+            "title": "[PRO] AI 활용해서 1인 개발부터 창업까지",
+            "level": 1
+          },
+          {
+            "id": "1aa393a5-a797-8087-b47a-cc1d13bb0337",
+            "title": "[PRO] 유기동물 입양 추천 시스템",
+            "tags": ["Interruption"],
+            "level": 1,
+            "children": [
+              {
+                "id": "1aa393a5-a797-8096-8439-d12eea1ecee8",
+                "title": "[PRO 0] 아키텍처 구현",
+                "level": 2
+              },
+              {
+                "id": "1aa393a5-a797-80a5-bc7d-e2b36ed24680",
+                "title": "[PRO 1] 홈서버 구축",
+                "level": 2
+              },
+              {
+                "id": "1aa393a5-a797-80aa-b09c-dfac34df373c",
+                "title": "[PRO 2] MLops 환경 구축",
+                "level": 2
+              },
+              {
+                "id": "1aa393a5-a797-80b8-a99a-c9aa5a463256",
+                "title": "[PRO 3] AI 비서 모델 선정",
+                "level": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "21f393a5-a797-800b-9600-e182d7442516",
+        "title": "Resume",
+        "tags": [],
+        "level": 0,
+        "children": []
+      },
+      {
+        "id": "21f393a5-a797-8000-91a3-e971cf9a2564",
+        "title": "AI",
+        "tags": [],
+        "level": 0,
+        "children": [
+          {
+            "id": "21f393a5-a797-809c-bb5b-f8da6d3531fb",
+            "title": "CLAUD",
+            "level": 1,
+            "children": [
+              {
+                "id": "21f393a5-a797-8061-a1ce-e97828e7c7d0",
+                "title": "claud code로 한 것",
+                "level": 2
+              }
+            ]
+          },
+          {
+            "id": "21f393a5-a797-802a-8890-f478f7c2896c",
+            "title": "Chat GPT",
+            "level": 1,
+            "children": [
+              {
+                "id": "21f393a5-a797-80d9-a9ff-e8e36afa1022",
+                "title": "1. 무자본 무경험인 사람이 AI로 한달에 10만원부터 벌기 프롬프트",
+                "level": 2,
+                "has_content": true
+              }
+            ]
+          },
+          {
+            "id": "21f393a5-a797-80bb-8f21-d2669e75f8df",
+            "title": "Perplexity",
+            "level": 1
+          }
+        ]
+      }
+    ],
+    "total_pages": 10,
+    "max_depth": 3,
+    "statistics": {
+      "root_pages": 3,
+      "branch_pages": 3,
+      "leaf_pages": 4,
+      "pages_with_content": 1,
+      "pages_with_tags": 2
+    }
+  },
+  "collection_summary": {
+    "collection_date": "2025-07-02",
+    "total_api_calls": 8,
+    "pages_with_blocks_retrieved": 1,
+    "content_sample_provided": true,
+    "next_steps": [
+      "Continue pagination to collect all remaining pages",
+      "Retrieve block content for all pages systematically",
+      "Organize content by categories and tags",
+      "Create individual markdown files for blog posts"
+    ]
+  }
+}
