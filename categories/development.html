@@ -132,7 +132,13 @@ description: "FastAPI, 비동기 처리, 아키텍처 구현 등 실제 개발 �
     <h2>📝 모든 개발 포스트</h2>
     
     <div class="posts-list">
-      {% assign dev_posts = site.posts | where_exp: "post", "post.categories contains 'development' or post.tags contains 'DEV'" %}
+      {% assign all_posts = site.posts %}
+      {% assign dev_posts = "" | split: "" %}
+      {% for post in all_posts %}
+        {% if post.categories contains 'development' or post.tags contains 'DEV' %}
+          {% assign dev_posts = dev_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
       {% if dev_posts.size > 0 %}
         {% for post in dev_posts %}

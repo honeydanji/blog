@@ -189,7 +189,13 @@ description: "미래 프로젝트 아이디어, 자동화 방안, 혁신적인 �
     <h2>📝 모든 아이디어 포스트</h2>
     
     <div class="posts-list">
-      {% assign idea_posts = site.posts | where_exp: "post", "post.categories contains 'ideas' or post.tags contains 'IDEA'" %}
+      {% assign all_posts = site.posts %}
+      {% assign idea_posts = "" | split: "" %}
+      {% for post in all_posts %}
+        {% if post.categories contains 'ideas' or post.tags contains 'IDEA' %}
+          {% assign idea_posts = idea_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
       {% if idea_posts.size > 0 %}
         {% for post in idea_posts %}

@@ -183,7 +183,13 @@ description: "새로운 기술 학습 과정, 튜토리얼, 베스트 프랙티�
     <h2>📝 모든 학습 포스트</h2>
     
     <div class="posts-list">
-      {% assign study_posts = site.posts | where_exp: "post", "post.categories contains 'study' or post.tags contains 'STDY'" %}
+      {% assign all_posts = site.posts %}
+      {% assign study_posts = "" | split: "" %}
+      {% for post in all_posts %}
+        {% if post.categories contains 'study' or post.tags contains 'STDY' %}
+          {% assign study_posts = study_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
       {% if study_posts.size > 0 %}
         {% for post in study_posts %}

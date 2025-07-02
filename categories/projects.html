@@ -87,7 +87,13 @@ description: "실제 프로덕션 환경에서 진행한 프로젝트들과 아�
     <h2>📝 모든 프로젝트 포스트</h2>
     
     <div class="posts-list">
-      {% assign project_posts = site.posts | where_exp: "post", "post.categories contains 'projects' or post.tags contains 'PRO'" %}
+      {% assign all_posts = site.posts %}
+      {% assign project_posts = "" | split: "" %}
+      {% for post in all_posts %}
+        {% if post.categories contains 'projects' or post.tags contains 'PRO' %}
+          {% assign project_posts = project_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
       {% if project_posts.size > 0 %}
         {% for post in project_posts %}

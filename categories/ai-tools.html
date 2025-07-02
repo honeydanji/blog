@@ -209,10 +209,16 @@ description: "Claude, ChatGPT 등 AI 도구 활용법과 실용적인 프롬프�
     <h2>📝 모든 AI 도구 포스트</h2>
     
     <div class="posts-list">
-      {% assign ai_posts = site.posts | where_exp: "post", "post.categories contains 'ai-tools' or post.tags contains 'AI'" %}
+      {% assign ai_posts = site.posts %}
+      {% assign filtered_posts = "" | split: "" %}
+      {% for post in ai_posts %}
+        {% if post.categories contains 'ai-tools' or post.tags contains 'AI' %}
+          {% assign filtered_posts = filtered_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
-      {% if ai_posts.size > 0 %}
-        {% for post in ai_posts %}
+      {% if filtered_posts.size > 0 %}
+        {% for post in filtered_posts %}
           <article class="post-item ai-tool">
             <div class="post-tool">
               {% if post.tags contains 'Claude' %}

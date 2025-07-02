@@ -2,125 +2,133 @@
 layout: page
 title: About
 permalink: /about/
-description: HoneyDanji에 대해 알아보세요
+description: 클라우드 네이티브 & MLOps 엔지니어 HoneyDanji에 대해 알아보세요
 ---
 
 # 안녕하세요! 👋
 
-저는 **HoneyDanji**입니다. 웹 개발에 열정을 가진 풀스택 개발자로, 새로운 기술을 학습하고 공유하는 것을 좋아합니다.
+저는 **HoneyDanji**입니다. 클라우드 네이티브 기술과 MLOps에 전문성을 가진 백엔드 개발자로, 실제 프로덕션 환경에서의 경험을 공유하는 것을 좋아합니다.
 
-## 🚀 개발자로서の 여정
+## 🚀 전문 분야
 
-### 현재 진행 중
-- **프론트엔드**: React, Next.js, TypeScript로 현대적인 웹 애플리케이션 개발
-- **백엔드**: Node.js, Express, NestJS를 활용한 API 서버 구축
-- **데이터베이스**: MongoDB, PostgreSQL, Redis 활용
-- **클라우드**: AWS, Docker를 이용한 배포 및 인프라 관리
+### 🛠️ 클라우드 & 인프라
+현재 **AWS EKS 기반의 Kubernetes 클러스터**에서 대부분의 작업을 하고 있습니다. 단순히 Pod를 띄우는 것을 넘어서, **ArgoCD를 통한 GitOps 배포**, **Karpenter로 노드 자동 스케일링**, **Istio 서비스 메시** 등을 활용한 프로덕션 환경을 구축하고 운영합니다.
 
-### 관심 분야
-- **성능 최적화**: 웹 애플리케이션의 로딩 속도와 사용자 경험 개선
-- **개발자 경험**: 개발 생산성을 높이는 도구와 워크플로우 개선
-- **오픈소스**: 커뮤니티에 기여하고 함께 성장하는 문화
-- **새로운 기술**: 웹 표준, 프레임워크, 도구의 최신 동향 탐구
+### 🤖 MLOps & AI 인프라
+머신러닝 모델을 프로덕션에서 서빙하고 관리하는 일을 주로 합니다. **KServe**로 모델 추론 서비스를 구축하고, **Kubeflow Pipelines**로 ML 워크플로우를 자동화하며, **Label Studio** 같은 도구들을 Kubernetes 환경에 통합해서 엔드투엔드 ML 파이프라인을 만들어왔습니다.
+
+### ⚡ 백엔드 개발
+- **Python**: FastAPI를 주로 사용하며, 비동기 처리와 대용량 데이터 처리에 익숙합니다
+- **비용 최적화**: EC2 Spot 인스턴스를 활용한 비용 최적화로 **70% 비용 절감** 달성
 
 ## 💻 기술 스택
 
-### Frontend
-- **Languages**: JavaScript, TypeScript
-- **Frameworks**: React, Next.js, Vue.js
-- **Styling**: CSS3, Sass, Styled-components, Tailwind CSS
-- **Tools**: Webpack, Vite, ESLint, Prettier
+### 🌐 클라우드 & 인프라
+- **AWS**: EC2, S3, RDS, Lambda, EKS - 특히 **Spot 인스턴스** 활용한 비용 최적화
+- **Kubernetes**: Pod, Service, Ingress, ConfigMap, Secret, RBAC 설정
+- **GitOps**: ArgoCD를 통한 완전 자동화된 배포 파이프라인
+- **스케일링**: Karpenter로 노드 자동 스케일링, HPA/VPA 설정
+- **모니터링**: Prometheus, Grafana, CloudWatch를 활용한 시스템 관찰성
 
-### Backend
-- **Runtime**: Node.js, Deno
-- **Frameworks**: Express, NestJS, Fastify
-- **Databases**: MongoDB, PostgreSQL, MySQL, Redis
-- **ORM/ODM**: Prisma, Mongoose, TypeORM
+### 🤖 MLOps & AI
+- **모델 서빙**: KServe, TorchServe, TritonServer
+- **ML 파이프라인**: Kubeflow Pipelines (KFP)
+- **데이터 처리**: Label Studio, S3 데이터 파이프라인
+- **AI 도구**: Claude, ChatGPT, MCP (Model Context Protocol)
 
-### DevOps & Tools
-- **Cloud**: AWS (EC2, S3, RDS, Lambda)
-- **Containerization**: Docker, Docker Compose
-- **CI/CD**: GitHub Actions, Jenkins
-- **Monitoring**: Sentry, LogRocket
-- **Version Control**: Git, GitHub, GitLab
+### ⚡ 백엔드 개발
+- **Python**: FastAPI, SQLAlchemy, Celery
+- **데이터베이스**: PostgreSQL, Redis
+- **아키텍처**: Microservices, Event-driven, API 설계
+- **성능**: 비동기 처리, 대용량 트래픽 최적화
 
-## 📚 최근 학습 중인 기술들
+## 🎯 최근 주요 성과
 
-- **Web3 & Blockchain**: Solidity, ethers.js
-- **Machine Learning**: TensorFlow.js, 웹에서의 AI 활용
-- **Mobile Development**: React Native, Flutter
-- **Serverless Architecture**: AWS Lambda, Vercel Functions
+### 💰 비용 최적화 전문가
+- **70% 비용 절감**: GPU 기반 AI 추론 플랫폼에서 동적 인스턴스 관리로 대폭적인 비용 절감
+- **Spot 인스턴스 마스터**: EC2 Spot 인스턴스 + Lambda 조합으로 필요할 때만 GPU 서버 운영
+- **스마트 스케일링**: Knative + Karpenter로 유휴 시간 자동 종료 시스템 구축
 
-## 🎯 프로젝트 경험
+### 🚀 자동화 시스템 구축
+- **완전 자동화된 ML 파이프라인**: 버튼 하나로 데이터 검증부터 모델 배포까지 전 과정 자동화
+- **Human-in-the-loop 라벨링**: Label Studio + DINO 모델 연동으로 자동 어노테이션 시스템
+- **GitOps 완전 적용**: ArgoCD + Kustomize로 멀티 환경 배포 자동화
 
-### 🔧 개인 프로젝트
-- **React 성능 최적화 라이브러리**: 커스텀 훅과 유틸리티 모음
-- **개발자 도구 모음**: 생산성 향상을 위한 CLI 도구들
-- **오픈소스 기여**: 여러 프로젝트에 버그 수정 및 기능 추가
+## 🎯 대표 프로젝트
 
-### 💼 업무 경험
-- **E-commerce 플랫폼**: React, Node.js 기반 온라인 쇼핑몰 개발
-- **관리자 대시보드**: 데이터 시각화와 실시간 모니터링 시스템
-- **API 서버**: RESTful API 및 GraphQL 서버 설계 및 구현
+### 🏗️ Amazon EKS 기반 MLOps 인프라 비용 최적화
+- **문제**: 평소 사용하지 않는 서비스(pod) 때문에 불필요한 서버(node) 운영으로 인한 서버 비용 발생
+- **해결**: Knative와 Karpenter를 이용해, 유휴 상태의 서비스를 자동으로 중지하고, 트래픽 발생 시 자동으로 확장되는 이벤트 기반 스케일링 환경 구축
+- **결과**: **70% 비용 절감** 달성
 
-## 🌱 학습 철학
+### 🤖 GPU 기반 AI 추론 플랫폼
+DINO(Detection Transformer) 모델을 활용한 이미지 분류 서비스를 구축했습니다. 단순히 모델을 배포하는 것을 넘어서, **동적으로 GPU 인스턴스를 생성하고 종료하는 시스템**을 만들어 비용을 크게 절약했습니다.
 
-> "Every day is a chance to learn something new"
+### 🔄 완전 자동화된 ML 파이프라인
+데이터 과학자가 "모델을 새로 훈련시키고 싶다"고 하면, 버튼 하나로 전체 과정이 자동화되는 시스템:
+1. **Slack 알림**: 훈련 시작을 팀에 알림
+2. **검증**: S3에서 필요한 파일들이 준비되었는지 확인
+3. **인프라 생성**: AWS Lambda로 GPU 인스턴스 동적 생성
+4. **훈련 실행**: 컨테이너 기반으로 격리된 환경에서 모델 훈련
+5. **완료 알림**: 성공/실패 여부를 다시 Slack으로 알림
 
-- **지속적 학습**: 기술의 빠른 변화에 적응하기 위한 꾸준한 학습
-- **실용적 접근**: 이론과 실무를 균형있게 조합한 문제 해결
-- **지식 공유**: 배운 것을 정리하고 다른 개발자들과 공유
-- **커뮤니티 참여**: 개발자 커뮤니티에서 활발한 소통과 기여
+## 🌱 개발 철학
+
+> "실제 프로덕션에서 검증된 것만 공유합니다"
+
+- **실무 중심**: 이론보다는 실제 프로덕션 환경에서 경험한 것들을 우선시
+- **비용 효율성**: 기술적 완벽함보다는 비즈니스 가치와 비용의 균형 추구
+- **자동화 우선**: 반복적인 작업은 무조건 자동화하여 휴먼 에러 최소화
+- **지식 공유**: 삽질한 경험과 해결 과정을 솔직하게 공유하여 커뮤니티에 기여
 
 ## 📖 이 블로그에서 다루는 내용
 
-### 🚀 **기술 튜토리얼**
-- 프레임워크 사용법과 베스트 프랙티스
-- 새로운 기술 도입 가이드
-- 문제 해결 과정과 해결 방법
+### 🚀 **프로젝트 (PRO)**
+- 실제 프로덕션 환경에서 진행한 프로젝트들과 아키텍처 설계 경험
+- Amazon EKS 기반 MLOps 인프라, 비용 최적화, 자동화 시스템 구축
+- AI 활용한 1인 개발부터 창업까지의 실제 경험
 
-### 💡 **개발 인사이트**
-- 프로젝트 경험담과 회고
-- 성능 최적화 사례 연구
-- 코드 품질 개선 방법
+### 🔧 **개발 (DEV)**
+- FastAPI, SQLAlchemy, 비동기 처리 등 실제 개발 과정과 기술적 해결책
+- Flask → FastAPI 마이그레이션 경험, 아키텍처 구현 과정
+- 프로덕션 환경에서 검증된 개발 패턴과 베스트 프랙티스
 
-### 🔧 **도구와 환경**
-- 개발 환경 구성과 최적화
-- 유용한 개발 도구 소개
-- 워크플로우 개선 팁
+### 🐛 **트러블슈팅 (TB)**
+- EKS, Kubernetes, 네트워킹 등 실제 운영 중 마주한 문제들과 해결 과정
+- 체계적인 문제 해결 접근법과 재발 방지 대책
+- 프로덕션 환경에서의 긴급 상황 대응 경험
 
-### 📊 **트렌드 분석**
-- 웹 개발 동향과 전망
-- 새로운 기술의 장단점 분석
-- 업계 뉴스와 의견
+### 🤖 **AI 도구 활용**
+- Claude, ChatGPT 등 AI 도구의 실용적인 활용법과 수익화 가능한 프롬프트
+- 개발 워크플로우 개선부터 비즈니스 자동화까지의 실제 사례
+- MCP(Model Context Protocol) 연동 경험
 
 ## 🤝 연락처 및 소셜
 
 함께 소통하고 싶으시거나 협업 제안이 있으시면 언제든 연락주세요!
 
-- **Email**: [contact@honeydanji.dev](mailto:contact@honeydanji.dev)
+- **Email**: [ekswl3680@gmail.com](mailto:ekswl3680@gmail.com)
 - **GitHub**: [github.com/honeydanji](https://github.com/honeydanji)
-- **Twitter**: [@honeydanji](https://twitter.com/honeydanji)
-- **LinkedIn**: [linkedin.com/in/honeydanji](https://linkedin.com/in/honeydanji)
+- **LinkedIn**: [성진 하](https://www.linkedin.com/in/%EC%84%B1%EC%A7%84-%ED%95%98-a53151302/)
 
-## 🎯 2024년 목표
+## 🎯 2025년 목표
 
-- [ ] **오픈소스 기여**: 의미있는 프로젝트에 적극적으로 기여하기
-- [ ] **기술 블로그**: 월 4회 이상 고품질 기술 포스트 작성
-- [ ] **컨퍼런스 발표**: 개발자 컨퍼런스에서 경험 공유
-- [ ] **새로운 기술 습득**: Web3, AI/ML 분야 심화 학습
-- [ ] **커뮤니티 활동**: 개발자 모임 및 스터디 그룹 참여
+- [ ] **플랫폼 엔지니어링**: 개발자들이 인프라 복잡성에 신경쓰지 않고 비즈니스 로직에만 집중할 수 있는 환경 구축
+- [ ] **FinOps 전문가**: 클라우드 비용을 단순히 줄이는 것이 아니라, 비즈니스 가치와 비용의 균형을 찾는 것
+- [ ] **오픈소스 기여**: 사용하고 있는 Kubernetes 생태계 도구들이 실제 프로덕션에서 더 잘 동작할 수 있도록 피드백
+- [ ] **기술 블로그**: 실제 경험을 바탕으로 한 고품질 기술 포스트 정기 발행
+- [ ] **AI 자동화**: Claude + MCP를 활용한 개발 워크플로우 완전 자동화
 
 ---
 
 ## 💭 마지막 한마디
 
-개발은 단순히 코드를 작성하는 것이 아니라, **문제를 해결하고 가치를 만들어내는 창조적인 활동**이라고 생각합니다. 
+기술은 도구일 뿐입니다. **진짜 중요한 것은 비즈니스 문제를 해결하고 실제 가치를 만들어내는 것**이라고 생각합니다.
 
-이 블로그를 통해 제가 배우고 경험한 것들을 나누며, 함께 성장하는 개발자 커뮤니티의 일원이 되고 싶습니다.
+이 블로그를 통해 제가 실제 프로덕션에서 경험한 것들을 솔직하게 공유하며, 비슷한 문제를 마주한 분들께 실질적인 도움이 되고 싶습니다.
 
-**함께 배우고, 함께 성장해요!** 🚀
+**실무에서 검증된 경험만 공유합니다!** 🚀
 
 ---
 
-*이 블로그는 Jekyll과 GitHub Pages로 구축되었으며, 모든 포스트는 Markdown으로 작성됩니다. 소스코드는 [GitHub 저장소](https://github.com/honeydanji/blog)에서 확인하실 수 있습니다.*
+*이 블로그는 Jekyll과 GitHub Pages로 구축되었으며, 모든 포스트는 실제 경험을 바탕으로 작성됩니다. 노션에서 정리한 기술 노트들을 체계적으로 블로그 포스트로 발행하고 있습니다.*

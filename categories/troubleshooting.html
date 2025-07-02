@@ -196,7 +196,13 @@ description: "EKS, Kubernetes, 네트워킹 등 실제 운영 중 마주한 문�
     <h2>📝 모든 트러블슈팅 포스트</h2>
     
     <div class="posts-list">
-      {% assign trouble_posts = site.posts | where_exp: "post", "post.categories contains 'troubleshooting' or post.tags contains 'TB'" %}
+      {% assign all_posts = site.posts %}
+      {% assign trouble_posts = "" | split: "" %}
+      {% for post in all_posts %}
+        {% if post.categories contains 'troubleshooting' or post.tags contains 'TB' %}
+          {% assign trouble_posts = trouble_posts | push: post %}
+        {% endif %}
+      {% endfor %}
       
       {% if trouble_posts.size > 0 %}
         {% for post in trouble_posts %}
