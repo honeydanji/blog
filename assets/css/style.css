@@ -39,7 +39,7 @@ body {
 
 /* 환영 포스트 */
 .welcome-post {
-  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .welcome-post h1 {
@@ -76,8 +76,9 @@ body {
 
 /* 카테고리 네비게이션 */
 .category-nav {
-  border-top: 1px solid #e1e4e8;
-  padding-top: 30px;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .category-nav h2 {
@@ -88,10 +89,14 @@ body {
 
 .category-nav ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .category-nav li {
-  margin-bottom: 10px;
+  flex: 1;
+  min-width: 150px;
 }
 
 .category-nav a {
@@ -103,6 +108,7 @@ body {
   color: #333;
   text-decoration: none;
   transition: background-color 0.2s;
+  text-align: center;
 }
 
 .category-nav a:hover {
@@ -185,6 +191,14 @@ body {
   
   .welcome-post h2 {
     font-size: 20px;
+  }
+  
+  .category-nav ul {
+    flex-direction: column;
+  }
+  
+  .category-nav li {
+    min-width: auto;
   }
   
   .category-nav a {
